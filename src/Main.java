@@ -26,3 +26,45 @@ public class Main {
                 double startingBalance = scanner.nextDouble();
 
                 register.createAccount(owner, startingBalance);
+
+            } else if (choice == 2) {
+                register.showAllAccounts();
+            }
+            else if (choice == 3) {
+                System.out.print("Ange ägarens namn: ");
+                String depositOwner = scanner.next();
+
+                Account account = register.findAccount(depositOwner);
+
+                if (account != null) {
+                    System.out.print("Ange belopp att sätta in: ");
+                    double amount = scanner.nextDouble();
+
+                    account.deposit(amount);
+                } else {
+                    System.out.println("Kontot kunde inte hittas.");
+                }
+            }
+            else if (choice == 4) {
+                System.out.print("Ange ägarens namn: ");
+                String withdrawOwner = scanner.next();
+
+                Account withdrawAccount = register.findAccount(withdrawOwner);
+
+                if (withdrawAccount != null) {
+                    System.out.print("Ange belopp att ta ut: ");
+                    double amount = scanner.nextDouble();
+
+                    withdrawAccount.withdraw(amount);
+                } else {
+                    System.out.println("Kontot kunde inte hittas.");
+                }
+
+            }
+            else if (choice == 5) {
+                running = false;
+                System.out.println("Programmet avslutas.");
+            }
+        }
+    }
+}
