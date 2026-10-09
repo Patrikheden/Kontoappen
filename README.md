@@ -1,3 +1,6 @@
+https://funet-my.sharepoint.com/:v:/g/personal/3kdyhapp26_hedepa_folkuniversitetet_nu/IQBu2GIVes43SZphNLzbGiRLATliPeKzguTIyDlXXmt7W5E?e=6QUldm
+
+
 1.Datasäkerhet/Inkapsling: Hur har du skyddat kontots uppgifter i din kod, och vad hade kunnat hända om du inte gjorde det?
 
 Svar: Jag har använt private på balance och owner i account.java,om jag inte hade gjort detta hade man lättare kunnat ändra saldot eller andra uppgifter på fel sätt.
